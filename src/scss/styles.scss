@@ -1,0 +1,170 @@
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+// Variable overrides
+$musta: #181818;
+$harmaa: #666;
+$vaalea-harmaa: #f5f5f5;
+$valkoinen: #fff;
+$vaalea: #8d8d8d;
+
+$theme-colors: (
+  'primary': $musta
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1400px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1360px
+);
+
+$spacer: 3.125rem;
+
+$spacers: (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 2.5),
+    6: ($spacer * 3)
+);
+
+$grid-gutter-width: 60px;
+
+$font-family-base: "Poppins", sans-serif;
+$font-size-base: 0.875rem;
+$line-height-base: 1.8;
+
+$headings-margin-bottom: $spacer * .4;
+$headings-font-family: "Poppins", sans-serif;
+$headings-font-weight: 700;
+$headings-line-height: 1.4;
+$headings-color: $musta;
+$h1-font-size: $font-size-base * 3.5;
+$h2-font-size: $font-size-base * 2.5;
+$h3-font-size: $font-size-base * 1.75;
+
+$input-btn-padding-y-sm: 0.25rem;
+$input-btn-padding-x-sm: 0.5rem;
+
+$input-btn-padding-y: 0.75rem;
+$input-btn-padding-x: 2rem;
+
+$input-btn-padding-y-lg: 1.25rem;
+$input-btn-padding-x-lg: 2rem;
+
+$input-btn-font-size-lg: $font-size-base;
+$input-btn-line-height-lg: $line-height-base;
+
+// Custom css
+body { color: $harmaa !important; }
+h1, h2, h3, h4, h5, h6 { text-transform: uppercase; letter-spacing: 3.5px; }
+a { transition: 200ms; }
+
+.btn {
+  text-transform: uppercase;
+  font-weight: 700 !important;
+   font-size:  0.75rem !important;
+   letter-spacing: 2px;
+   border-radius: 0 !important;
+}
+
+.navbar {
+  a {
+    color: $musta !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .nav-item {
+    margin-right: 20px !important;
+  }
+}
+
+.frontpage-hero {
+  background-image: url('../assets/chairs.jpg');
+  background: {
+    size: cover;
+    repeat: no-repeat;
+    position: center center;
+  }
+
+  .hero-content {
+    padding: 10vw 7.5vw;
+    p { font-weight: 400; }
+  }
+}
+
+.posts {
+  .post {
+    .post-content {
+      background-color: $vaalea-harmaa;
+    }
+
+    .post-image {
+      background: {
+        size: cover;
+        repeat: no-repeat;
+        position: center center;
+      }
+    }
+  }
+}
+
+.vaalea {
+  h1, h2, h3, h4, h5, h6 { color: $valkoinen; }
+  p { color: $vaalea; }
+  a {
+    color: $valkoinen;
+    &:hover { color: $valkoinen; }
+  }
+}
+
+.footer {
+  background-color: $musta;
+
+  .footer-logo {
+    max-height: 100px;
+    border-radius: 50%;
+  }
+
+  .tweet {
+    display: flex;
+    font-size: 1rem;
+
+    .fa {
+      margin-top: 5px;
+      font-size: 22px;
+      color: $valkoinen;
+      margin-right: 10px;
+    }
+  }
+
+  .somelinkit {
+    .fa {
+      color: #999;
+      font-size: 1rem;
+      margin-right: 15px;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .background-section {
+    padding: 150px 0;
+  }
+}
+
+// Bootstrap Sass files
+@import 'node_modules/bootstrap/scss/bootstrap';
