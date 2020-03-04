@@ -94,6 +94,7 @@ a { transition: 200ms; }
 
 .frontpage-hero {
   background-image: url('../assets/chairs.jpg');
+  box-shadow: inset 0 10000px rgba(255,255,255,0.6);
   background: {
     size: cover;
     repeat: no-repeat;
@@ -107,6 +108,32 @@ a { transition: 200ms; }
 }
 
 .posts {
+  .carousel-indicators {
+    justify-content: flex-start;
+    margin-left: 40px;
+    margin-bottom: 30px;
+
+    li {
+      text-indent: 0!important;
+      width: 12px;
+      height: 32px;
+      background: none !important;
+      background-clip: unset;
+      color: $valkoinen;
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+      opacity: 1;
+      &.active, &:hover {
+        border-bottom: 4px solid $valkoinen;
+      }
+    }
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    color: $musta;
+  }
+
   .post {
     .post-content {
       background-color: $vaalea-harmaa;
