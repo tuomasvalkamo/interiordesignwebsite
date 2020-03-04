@@ -1,2 +1,2 @@
 # interiordesignwebsite
-Interior design Bootstrap website
+Website made with Bootstrap.
